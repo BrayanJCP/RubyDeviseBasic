@@ -1,0 +1,20 @@
+<div class="jumbotron text-center">
+    <h1>Hola Mundo</h1>
+    <p>Funciona</p>
+</div>
+
+
+<ul class="list-group">
+    <% for product in @products %>
+        <li class="list-group-item">
+            <%= product.name %>
+            <ul class="list-group">
+                <% for store in product.store %>
+                <li class="list-group-item">
+                    <%= store.name%>
+                </li>
+                <% end%>
+            </ul>
+        </li>
+        <% end %>
+</ul>

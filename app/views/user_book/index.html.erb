@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+        <h1>Libros del Usuario</h1>
+        <p>Coleccion de libros del Usuario</p>
+    </div>
+    
+    
+    <ul class="list-group">
+        <% for book in @userBook %>
+            <li class="list-group-item">
+                <%= book.name %>
+                <!-- <form class="form-group" method="POST" action="<%= libros_agregar_libro_path%>">
+                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                    <input type="hidden" name="book[id]" value="<%= book.id %>">
+                    <button type="submit" class="btn btn-primary">Agregar a mis libros</button>
+                </form> -->
+            </li>
+            <% end %>
+    </ul>
